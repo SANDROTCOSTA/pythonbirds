@@ -21,5 +21,5 @@ if __name__ == '__main__':
         print(filho.nome)
     luciano.sobrenome = 'Ramalho'
     del luciano.filhos
-    print(luciano.__init__)
-    print(renzo.__init__)
+    print(luciano.__dict__)
+    print(renzo.__dict__)

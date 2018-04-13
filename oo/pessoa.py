@@ -2,6 +2,7 @@ from builtins import print
 
 
 class Pessoa:
+    olhos = 2 # atributo defaut ou atributo de classe
     def __init__(self, *filhos, nome=None, idade=35):
         self.idade = idade
         self.nome = nome
@@ -21,5 +22,13 @@ if __name__ == '__main__':
         print(filho.nome)
     luciano.sobrenome = 'Ramalho'
     del luciano.filhos
+    luciano.olhos = 1
+    del luciano.olhos
     print(luciano.__dict__)
     print(renzo.__dict__)
+    Pessoa.olhos = 3
+    print(Pessoa.olhos) #  acessando o atributo de classe
+    print(luciano.olhos) # acessando o atrubuto de classe do objeto
+    print(id(Pessoa.olhos), id(luciano.olhos), id(renzo.olhos))
+
+
